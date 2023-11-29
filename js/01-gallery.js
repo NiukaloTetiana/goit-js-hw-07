@@ -33,10 +33,10 @@ function onImgClick(event) {
   instance = basicLightbox.create(
     `<img width="1200" height="800" src="${dataSet}">`,
     {
-      onShow: (instance) => {
+      onShow: () => {
         window.addEventListener("keydown", onEscapeClick);
       },
-      onClose: (instance) => {
+      onClose: () => {
         window.removeEventListener("keydown", onEscapeClick);
       },
     }
